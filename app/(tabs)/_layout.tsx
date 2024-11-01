@@ -3,7 +3,7 @@ import React from "react";
 import { Tabs } from "expo-router";
 
 import icons from "@/constants/icons.js";
-import { ShoppingProvider } from "@/context/ShoppingContext";
+import { ShoppingCart } from "phosphor-react-native";
 
 const TabIcon = ({ icon, color, name, focused }: any) => {
   return (
@@ -26,14 +26,14 @@ const TabIcon = ({ icon, color, name, focused }: any) => {
 
 const TabsLayout = () => {
   return (
-    <ShoppingProvider>
+    <>
       <Tabs
         screenOptions={{
           tabBarShowLabel: false,
-          tabBarActiveTintColor: "#FFA001",
+          tabBarActiveTintColor: "#DBAC2C",
           tabBarInactiveTintColor: "#CDCDE0",
           tabBarStyle: {
-            backgroundColor: "#161622",
+            backgroundColor: "#272221",
             borderTopWidth: 1,
             borderTopColor: "#232533",
             height: 84,
@@ -100,8 +100,23 @@ const TabsLayout = () => {
             ),
           }}
         ></Tabs.Screen>
+        <Tabs.Screen
+          name="cart"
+          options={{
+            title: "Cart",
+            headerShown: false,
+            tabBarIcon: ({ color, focused }) => (
+              <TabIcon
+                icon={icons.cart}
+                color={color}
+                name="Cart"
+                focused={focused}
+              />
+            ),
+          }}
+        ></Tabs.Screen>
       </Tabs>
-    </ShoppingProvider>
+    </>
   );
 };
 

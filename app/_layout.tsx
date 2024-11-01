@@ -35,11 +35,35 @@ export default function RootLayout() {
   return (
     <GlobalProvider>
       <ShoppingProvider>
-        <Stack>
-          <Stack.Screen name="index" options={{ headerShown: false }} />
-          <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="(shop)" options={{ headerShown: false }} />
+        <Stack screenOptions={{ contentStyle: { backgroundColor: "#FFFFFF" } }}>
+          <Stack.Screen
+            name="index"
+            options={{
+              headerShown: false,
+              contentStyle: { backgroundColor: "#FFFFFF" },
+            }}
+          />
+          <Stack.Screen
+            name="(auth)"
+            options={{
+              headerShown: false,
+              contentStyle: { backgroundColor: "#FFFFFF" },
+            }}
+          />
+          <Stack.Screen
+            name="(tabs)"
+            options={{
+              headerShown: false,
+              contentStyle: { backgroundColor: "#FFFFFF" },
+            }}
+          />
+          <Stack.Screen
+            name="(shop)"
+            options={{
+              headerShown: false,
+              contentStyle: { backgroundColor: "#FFFFFF" },
+            }}
+          />
         </Stack>
       </ShoppingProvider>
     </GlobalProvider>

@@ -20,6 +20,7 @@ import irlandes from "../assets/images/Irlandes.png";
 import mocaccino from "../assets/images/Mocaccino.png";
 import grandeCafe from "../assets/images/GrandeCafe.png";
 import smoke from "../assets/images/Smoke.png";
+import finalizado from "../assets/images/Illustration.png";
 
 export default {
   profile,
@@ -44,4 +45,5 @@ export default {
   mocaccino,
   grandeCafe,
   smoke,
+  finalizado,
 };

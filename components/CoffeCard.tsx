@@ -41,7 +41,7 @@ const CoffeCard = ({ name, description, price, image }: CoffeCardProps) => {
         </Text>
         <Text className="text-base text-secondary-200 mt-3 font-bregular">
           R${" "}
-          <Text className="font-bold text-secondary-200 text-xl">{price}</Text>
+          <Text className="font-bold text-secondary-200 text-xl">{price}0</Text>
         </Text>
       </View>
     </TouchableOpacity>

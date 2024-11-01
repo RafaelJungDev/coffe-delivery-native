@@ -27,39 +27,21 @@ const Search = () => {
 
   const atualizar = () => {
     console.log(items);
-    setItems([...items, { name: "Café", price: 5 }]);
+    if (items.find((item: any) => item.name === name && item.ml === ml)) {
+      const newItems = items.map((item: any) => {
+        if (item.name === name && item.ml === ml) {
+          return { ...item, quantidade: item.quantidade + quantidade };
+        }
+        return item;
+      });
+      setItems(newItems);
+      return;
+    }
+    setItems([...items, { name, description, price, ml, quantidade }]);
   };
 
   return (
     <SafeAreaView>
-      <TouchableOpacity
-        onPress={() => {
-          setItems([...items, { name: "Café", price: 5 }]);
-        }}
-      >
-        <Text>Adicionar</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => {
-          setItems([...items, { name: "Café", price: 5 }]);
-        }}
-      >
-        <Text>Adicionar</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => {
-          setItems([...items, { name: "Café", price: 5 }]);
-        }}
-      >
-        <Text>Adicionar</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => {
-          setItems([...items, { name: "Café", price: 5 }]);
-        }}
-      >
-        <Text>Adicionar</Text>
-      </TouchableOpacity>
       <View>
         <View className="h-20 bg-gray-100 w-full flex-row justify-between items-center px-10 pt-6">
           <TouchableOpacity
@@ -85,7 +67,7 @@ const Search = () => {
                 R$
               </Text>
               <Text className="text-secondary font-bbold text-3xl">
-                {price}
+                {price}0
               </Text>
             </View>
           </View>
